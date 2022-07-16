@@ -103,6 +103,7 @@ function waitViewable() {
 
 function startVideoAd(visible) {
   if (visible) {
+    mraid.open()
     mraid.removeEventListener("viewableChange", startVideoAd)
     mraid.initVpaid(vpaidVideoCreativePlayer) // startAd() is called
     mraid.play()
