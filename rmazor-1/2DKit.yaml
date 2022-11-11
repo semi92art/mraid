@@ -1,0 +1,77 @@
+# The name, version and identifier, for mobile app packaging
+name: Rmazor1.9 Playable Ad
+description: 2DKit Playable Ad Video Project
+version: 1.0.0
+id: com.2dkit.playableadvideoportrait
+# The main class name
+main: yourproject.YourProject
+
+# The platform to use when invoking `run` or `build` with no arguments
+default_platform: html5
+
+# The preferred window size when running on the desktop. Note that this is only a *suggested* size.
+# You should design your game to scale to as many different sizes as possible.
+width: 1080
+height: 1920
+scale_mode: letterbox
+max_width: 1536
+max_height: 2536
+# The initial orientation and fullscreen state on mobile devices.
+orientation: portrait
+fullscreen: false
+
+optimizer:
+  code_protection: true
+  generate_mp4: true
+  generate_webm: false
+  generate_mov: false
+  generate_packed_atlases: false
+  quality_mp4: 35
+  quality_webm: 35
+  quality_png: 30
+  quality_jpg: 30
+  generated_video_framerate: 60
+  generated_video_fps: 60
+  video_scale: 0.5
+
+# Additional flags to pass to the Haxe compiler
+haxe_flags: -D kit_disable_webgl
+
+# Additional paths to include in the build
+# extra_paths:
+#   assets: dir1 dir2
+#   libs: dir1 dir2
+#   src: ../dir1 ../dir2
+#   web: ["dir1 with spaces", "dir2"]
+
+
+# Scene files to open in 2DKit Creator when this project is opened.
+open_creator: assets/bootstrap/Preloader.scene assets/mainassets/EndCardOverlay.symbol assets/mainassets/Home.scene 
+# Android-specific configuration
+android:
+  # https://developer.android.com/guide/topics/manifest/manifest-intro.html
+  AndroidManifest.xml: |
+    <manifest android:installLocation="auto">
+      <uses-permission android:name="android.permission.INTERNET" />
+    </manifest>
+
+# iOS-specific configuration
+ios:
+  # http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference
+  Info.plist: |
+    <key>UIDeviceFamily</key>
+    <array>
+      <string>1</string>
+      <string>2</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <true/>
+
+playable_ad: 
+  facebook_zip: true
+  facebook_token: ""
+  android_url: "https://play.google.com/store/apps/details?id=com.MazingLabCo.MazesForever"
+  ios_url: "https://apps.apple.com/us/app/ball-maze-ball-puzzle-games/id1601083190"
+customer_token: ""
+
+metadata: HL+OMxsi6dhpAaQjcqCQMRlwrbn1EcWa8iIYkpYka6x/MFWigv95iGHkwT6Uj60mApv0F1Hvsob1FOcArhwclLDRtzIaWJLWbD/ciyNiS3m8ENIWFrpgJvh7CSP6fJxlG7v78mK22GNicUEDyZZ58Q==
